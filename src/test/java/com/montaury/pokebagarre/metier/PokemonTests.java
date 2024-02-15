@@ -3,6 +3,7 @@ package com.montaury.pokebagarre.metier;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PokemonTests {
@@ -18,8 +19,8 @@ class PokemonTests {
         boolean vainqueurPoke2 = pokemon2.estVainqueurContre(pokemon1);
 
         // THEN
-        Assertions.assertEquals(true, vainqueurPoke1);
-        Assertions.assertEquals(false, vainqueurPoke2);
+        assertThat(vainqueurPoke1).isEqualTo(true);
+        assertThat(vainqueurPoke2).isEqualTo(false);
     }
 
     @Test
@@ -33,8 +34,8 @@ class PokemonTests {
         boolean vainqueurPoke2 = pokemon2.estVainqueurContre(pokemon1);
 
         // THEN
-        Assertions.assertEquals(true, vainqueurPoke1);
-        Assertions.assertEquals(false, vainqueurPoke2);
+        assertThat(vainqueurPoke1).isEqualTo(true);
+        assertThat(vainqueurPoke2).isEqualTo(false);
     }
 
     @Test
@@ -48,7 +49,7 @@ class PokemonTests {
         boolean vainqueurPoke2 = pokemon2.estVainqueurContre(pokemon1);
 
         // THEN
-        Assertions.assertEquals(true, vainqueurPoke1);
-        Assertions.assertEquals(true, vainqueurPoke2);
+        assertThat(vainqueurPoke1).isEqualTo(true);
+        assertThat(vainqueurPoke2).isEqualTo(true);
     }
 }
